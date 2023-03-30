@@ -23,8 +23,11 @@ body[data-theme='light'] {
   --colors-ui-base: hsl(0, 0%, 100%);
 
   --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  --shadow-task: 1px 2px 8px 0px rgba(34, 60, 80, 0.2);
 
   --border-category: 1px solid hsl(222, 11%, 82%);
+  --border-task: 2px solid hsl(0, 0%, 40%);
+
 }
 body[data-theme='dark'] {
   --colors-text: hsl(0, 0%, 100%);
@@ -35,6 +38,8 @@ body[data-theme='dark'] {
   --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
 
   --border-category: 1px solid hsl(209, 17%, 24%);
+  --border-task: 2px solid hsl(209, 17%, 50%);
+
 }
 
 body {

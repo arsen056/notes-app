@@ -1,12 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Container } from 'common/components/container';
 import { Categories } from 'features/categories';
+import { Tasks } from 'features/tasks';
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 20% 80%;
-`;
+import { Grid } from './style';
 
 export const MainLayout = () => {
   return (
@@ -14,6 +11,7 @@ export const MainLayout = () => {
       <Container>
         <Grid>
           <Categories/>
+          <Tasks/>
         </Grid>
       </Container>
     </main>
