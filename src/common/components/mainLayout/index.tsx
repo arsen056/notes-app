@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'common/components/container';
+import { Categories } from 'common/components/categories';
 
 const Grid = styled.div`
   display: grid;
@@ -12,8 +13,7 @@ export const MainLayout = () => {
     <main>
       <Container>
         <Grid>
-          <div>123</div>
-          <div>123</div>
+          <Categories/>
         </Grid>
       </Container>
     </main>
