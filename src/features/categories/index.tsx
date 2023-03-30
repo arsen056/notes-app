@@ -1,7 +1,5 @@
 import React from 'react';
-import { CategoriesElement, List, ListItem } from 'common/components/categories/styles';
-
-
+import { CategoriesElement, List, ListItem } from 'features/categories/styles';
 
 export const Categories = () => {
   return (

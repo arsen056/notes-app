@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'common/components/container';
-import { Categories } from 'common/components/categories';
+import { Categories } from 'features/categories';
 
 const Grid = styled.div`
   display: grid;
