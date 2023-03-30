@@ -1,6 +1,7 @@
 import React from 'react';
 import { Task } from 'common/components/task';
-import { TasksWrapper } from 'features/tasks/styles';
+
+import { TasksWrapper } from './styles';
 
 export const Tasks = () => {
   return (
