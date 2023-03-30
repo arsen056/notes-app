@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useToggleTheme = () => {
+export const useTheme = () => {
 
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 

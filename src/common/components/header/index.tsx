@@ -2,11 +2,11 @@ import React from 'react';
 import { Container } from 'common/components/container';
 
 import { FaMoon } from 'react-icons/fa';
-import { useToggleTheme } from 'common/hooks/toggleTheme';
+import { useTheme } from 'common/hooks/useTheme';
 import { HeaderElement, ModeSwitcher, Title, Wrapper } from 'common/components/header/styles';
 
 export const Header = () => {
-  const toggleTheme = useToggleTheme();
+  const toggleTheme = useTheme();
 
   return (
     <HeaderElement>
