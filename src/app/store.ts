@@ -1,9 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import { appReducer } from 'app/slice';
+import { categoryReducer } from 'features/categories/slice';
 
 const rootReducer = combineReducers({
-  app: appReducer
+  app: appReducer, categories: categoryReducer
 });
 
 export type RootStateType = ReturnType<typeof rootReducer>
