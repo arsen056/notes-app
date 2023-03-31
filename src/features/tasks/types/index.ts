@@ -17,4 +17,4 @@ export type TaskType = {
   addedDate: string;
 }
 
-export type TasksStateType = Record<string, TaskType>
+export type TasksStateType = { currentId: string, tasks: Record<string, TaskType[]> }

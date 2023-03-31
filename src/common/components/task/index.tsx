@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { TaskElement } from './style';
 
-export const Task = () => {
+type Props = {
+  title: string,
+  status: number
+}
+
+export const Task:FC<Props> = ({ title , status }) => {
   return (
     <TaskElement>
-      <span>Task</span>
-      <input type="checkbox"/>
+      <span>{title}</span>
+      <input type="checkbox" checked={!!status} onChange={() => {}} />
     </TaskElement>
   );
 };

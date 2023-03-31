@@ -8,5 +8,3 @@ export type CategoryType = {
 export type UpdateCategory = {
   title: string
 }
-
-export type CategoriesStateType = CategoryType[]

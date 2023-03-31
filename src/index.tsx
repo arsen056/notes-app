@@ -18,4 +18,7 @@ root.render(
   </Provider>
 );
 
+// @ts-ignore
+window.store = store;
+
 reportWebVitals();
