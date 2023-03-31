@@ -1,6 +1,6 @@
 import { TasksStateType, TaskType } from 'features/tasks/types';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { setCategories } from 'features/categories/slice';
+import { pushCategory, setCategories } from 'features/categories/slice';
 import { TasksAPI } from 'features/tasks/api';
 
 const initialState = { currentId: '', tasks: {} } as TasksStateType;
@@ -19,6 +19,9 @@ const slice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(setCategories, (state, action) => {
       action.payload.forEach((tl) => state.tasks[tl.id] = []);
+    });
+    builder.addCase(pushCategory, (state, action) => {
+      state.tasks[action.payload.id] = [];
     });
   }
 });

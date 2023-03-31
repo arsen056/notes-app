@@ -12,13 +12,15 @@ const slice = createSlice({
   reducers: {
     setCategories: (_, action: PayloadAction<CategoryType[]>) => {
       return action.payload;
+    },
+    pushCategory: (state, action: PayloadAction<CategoryType>) => {
+      state.unshift(action.payload);
     }
   }
 });
 
 export const fetchCategories = createAsyncThunk('fetch/categories',
   async (_, { dispatch }) => {
-
     try {
       const res = await categoriesAPI.getCategories();
       dispatch(setCategories(res.data));
@@ -32,5 +34,18 @@ export const fetchCategories = createAsyncThunk('fetch/categories',
   }
 );
 
-export const { setCategories } = slice.actions;
+export const createCategory = createAsyncThunk('add/categories',
+  async (title: string, { dispatch }) => {
+    try {
+      const res = await categoriesAPI.addCategory(title);
+      dispatch(pushCategory(res.data.data.item));
+    } catch (e) {
+
+    } finally {
+
+    }
+  }
+);
+
+export const { setCategories, pushCategory } = slice.actions;
 export const categoryReducer = slice.reducer;

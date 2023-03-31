@@ -7,6 +7,10 @@ export const categoriesAPI = {
     return instance.get<CategoryType[]>('todo-lists');
   },
 
+  addCategory(title: string) {
+    return instance.post('todo-lists', { title });
+  },
+
   updateCategory(id: string, todoList: UpdateCategory) {
     return instance.put(`todo-lists/${id}`, todoList);
   },
